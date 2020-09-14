@@ -28,7 +28,7 @@ JumboApi.getProduct('67649PAK') //getting product information for milk
 
 Example output:
 
-```json
+```yaml
 { id: '67649PAK',
   title: 'Jumbo Verse Halfvolle Melk 2L',
   quantityOptions:
