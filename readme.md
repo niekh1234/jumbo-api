@@ -1,4 +1,5 @@
-# Welcome to the Jumbo.com api wrapper for NodeJS
+
+## Welcome to the unofficial jumbo.com api wrapper for NodeJS
 
 ## Installation
 
@@ -95,3 +96,5 @@ JumboApi.getStoreDeliveryTimeSlots(storeId)
 ```Javascript
 JumboApi.getStorePickupTimeSlots(storeId)
 ```
+
+Check it out and fork it on [Github](https://github.com/niekh1234/jumbo-api)

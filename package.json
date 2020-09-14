@@ -1,13 +1,13 @@
 {
   "name": "jumbo-api",
-  "version": "1.0.1",
-  "description": "node module to communicate with Jumbo.com (Dutch store) api.",
+  "version": "1.0.5",
+  "description": "Unofficial NodeJS wrapper for Jumbo.com (mobile) api",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Niek Hagen",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "qs": "^6.9.4"
   }
 }
