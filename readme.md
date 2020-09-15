@@ -65,43 +65,43 @@ JumboApi.method('')
 
 ### Search products
 
-```Javascript
+```javascript
 JumboApi.searchProducts(query, limit, offset)
 ```
 
 ### Search by product id
 
-```Javascript
+```javascript
 JumboApi.searchId(productId)
 ```
 
 ### Get all stores
 
-```Javascript
+```javascript
 JumboApi.getStores()
 ```
 
 ### Get individual store
 
-```Javascript
+```javascript
 JumboApi.getStore(storeId)
 ```
 
 ### Get unoccupied delivery timeslots for store
 
-```Javascript
+```javascript
 JumboApi.getStoreDeliveryTimeSlots(storeId)
 ```
 
 ### Get unoccupied pickup timeslots for store
 
-```Javascript
+```javascript
 JumboApi.getStorePickupTimeSlots(storeId)
 ```
 
 ### Get current promotions for shop
 
-```Javascript
+```javascript
 JumboApi.getStorePromotions(storeId)
 ```
 
@@ -109,7 +109,7 @@ JumboApi.getStorePromotions(storeId)
 
 ### Login and get a token for protected api calls
 
-```Javascript
+```javascript
 JumboApi.getToken(username, password)
    .then((token) => {
       // save token for later. Or do something cool.
@@ -122,7 +122,7 @@ JumboApi.getToken(username, password)
 
 ### Get your orders:
 
-```Javascript
+```javascript
 JumboApi.getMyOrders(token)
    .then((orders) => {})
    .catch((err) => {})
