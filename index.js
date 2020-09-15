@@ -110,6 +110,21 @@ class JumboApi {
     });
   }
 
+  static getStorePromotions(storeId) {
+    if (typeof storeId !== 'number' && typeof storeId !== 'string')
+      throw new TypeError(`Expected id to be a number or a string, got a ${typeof id}`);
+
+    return new Promise((resolve, reject) => {
+      axios.get(`${BASE_URL}/promotion-overview?store_id=${storeId}`)
+        .then((res) => {
+          resolve(res.data.tabs);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
   static getToken(username, password) {
     if (typeof username !== 'string')
       throw new TypeError(`Expected username to be a string, got a ${typeof username}`);
@@ -142,11 +157,21 @@ class JumboApi {
   static getMyOrders(token) {
     if (typeof token !== 'string')
       throw new TypeError(`Expected token to be a string, got a ${typeof token}`);
+    if (token === '')
+      throw new Error('Please provide a token, received nothing');
+
+    const config = {
+      headers: {
+        'x-jumbo-token': token,
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'User-Agent': 'Jumbo/7.5.2 (python-jumbo-api)'
+      }
+    };
 
     return new Promise((resolve, reject) => {
-      axios.get(`${BASE_URL}/users/me/orders`)
+      axios.get(`${BASE_URL}/users/me/orders`, config)
         .then((res) => {
-          resolve(res);
+          resolve(res.data);
         })
         .catch((err) => {
           reject(err);
