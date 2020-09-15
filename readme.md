@@ -21,8 +21,8 @@ Getting a product:
 
 ```javascript
 JumboApi.getProduct('67649PAK') //getting product information for milk
-   .then((res) => {
-      console.log(res);
+   .then((products) => {
+      console.log(products);
    })
    .catch((err) => {
       console.log(err);
@@ -106,7 +106,9 @@ JumboApi.getStorePromotions(storeId)
 ```
 
 ## Auth
+
 ### Login and get a token for protected api calls
+
 ```Javascript
 JumboApi.getToken(username, password)
    .then((token) => {
@@ -119,6 +121,7 @@ JumboApi.getToken(username, password)
 ```
 
 ### Get your orders:
+
 ```Javascript
 JumboApi.getMyOrders(token)
    .then((orders) => {})
