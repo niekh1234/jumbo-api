@@ -1,6 +1,8 @@
 
 ## Welcome to the unofficial jumbo.com api wrapper for NodeJS
 
+### This package is still WIP
+
 ## Installation
 
 ```npm
@@ -97,4 +99,32 @@ JumboApi.getStoreDeliveryTimeSlots(storeId)
 JumboApi.getStorePickupTimeSlots(storeId)
 ```
 
-Check it out and fork it on [Github](https://github.com/niekh1234/jumbo-api)
+### Get current promotions for shop
+
+```Javascript
+JumboApi.getStorePromotions(storeId)
+```
+
+## Auth
+### Login and get a token for protected api calls
+```Javascript
+JumboApi.getToken(username, password)
+   .then((token) => {
+      // save token for later. Or do something cool.
+      // keep in mind that due to everything being async, having another function using the token *below* this function will not work
+   })
+   .catch((err) => {
+      console.log(err)
+   })
+```
+
+### Get your orders:
+```Javascript
+JumboApi.getMyOrders(token)
+   .then((orders) => {})
+   .catch((err) => {})
+```
+
+
+This package is still a work in progress, if you would like to help you are free to submit a pr!
+Check it out on [Github](https://github.com/niekh1234/jumbo-api)
