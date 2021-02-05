@@ -1,13 +1,13 @@
 {
   "name": "jumbo-api",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Unofficial NodeJS wrapper for Jumbo.com (mobile) api",
   "main": "index.js",
   "scripts": {},
   "author": "Niek Hagen",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.20.0",
-    "qs": "^6.9.4"
+    "axios": "^0.21.1",
+    "qs": "^6.9.6"
   }
 }
