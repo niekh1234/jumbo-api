@@ -1,7 +1,7 @@
 const axios = require('axios');
 const qs = require('qs');
 
-const BASE_URL = 'https://mobileapi.jumbo.com/v12/';
+const BASE_URL = 'https://mobileapi.jumbo.com/v17/';
 
 class JumboApi {
   static getProduct(id) {
